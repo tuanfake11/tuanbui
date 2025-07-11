@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Key Checker</title>
+</head>
+<body>
+    <h1 id="key-display">Key của bạn là: ...</h1>
+
+    <script>
+        // Lấy tham số 'key' từ URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const key = urlParams.get('key');
+
+        // Hiển thị key
+        if (key) {
+            document.getElementById("key-display").textContent = `Key của bạn là: ${key}`;
+        } else {
+            document.getElementById("key-display").textContent = "Không tìm thấy key!";
+        }
+    </script>
+</body>
+</html>
